@@ -11,4 +11,67 @@
   #map {
     height: 100vh;
     width: 100vw;
+    z-index: 0;
   }
+
+  #container{
+    display: flex;
+    justify-content: flex-end
+  }
+
+  #navbar {
+    height: 40px;
+    width: 100%;
+    background-color: #02182B;
+    display: flex;
+    justify-content: flex-end
+  }
+  #sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .navbuttons {
+    align-self: center;
+    color: #738290;
+    padding: 5px;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  #activity{
+    height: 100px;
+    width: 150px;
+    border-color: cadetblue;
+    border-width: 1px;
+    display: flex;
+    justify-content: flex-start; 
+    align-self: center; 
+    z-index: 1;
+    padding: 15px;
+   
+  }
+
+  ul{
+    list-style-type: none;
+    padding: 5px;
+    margin: 5px;
+  }
+
+  #itinerary {
+    height: 100px;
+    /* width: 150px; */
+    border-color: cadetblue;
+    border-width: 1px;
+    display: flex;
+    justify-content: flex-start;  
+    z-index: 1;
+    padding: 15px;
+    margin: 10px;
+  }
+
+.dropdown {
+  
+}
