@@ -8,8 +8,20 @@
     background-color: #C1B5AD;
   }
 
+  header {
+    display: flex;
+    align-content: space-between;
+    background-color: #02182B;
+    height: 3rem;
+    align-items: center
+  }
+  
+  h1 {
+    color: #738290;
+  }
+
   #map {
-    height: 100vh;
+    height: calc(100vh - 3rem);
     width: 100vw;
     z-index: 0;
   }
@@ -22,7 +34,6 @@
   #navbar {
     height: 40px;
     width: 100%;
-    background-color: #02182B;
     display: flex;
     justify-content: flex-end
   }
@@ -31,7 +42,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-
   }
 
   .navbuttons {

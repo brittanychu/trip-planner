@@ -656,15 +656,14 @@ const map = new mapboxgl.Map({
 // markerDomEl.style.backgroundImage = "url(http://i.imgur.com/WbMOfMl.png)";
 // new mapboxgl.Marker(markerDomEl).setLngLat([-74.009, 40.705]).addTo(map);
 
-const marker = buildMarker("hotels", [-74.009151, 40.705086]); // or [-87.6354, 41.8885]
-console.log("marker", marker)
+const marker = buildMarker("activities", [-74.009151, 40.705086]); 
 marker.addTo(map);
 
 /***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-const mapboxgl = __webpack_require__(0);
+const { Marker } = __webpack_require__(0);
 
 const iconURLs = {
     hotels: "http://i.imgur.com/D9574Cu.png",
@@ -673,13 +672,16 @@ const iconURLs = {
 };
 
 
-function buildMarker(name, locationArr){
+function buildMarker(type, coords){
+    if(!iconURLs.hasOwnProperty(type)) {
+        type = "activities";
+    }
     const markerDomEl = document.createElement("div");
     markerDomEl.style.width = "32px";
     markerDomEl.style.height = "39px";
-    markerDomEl.style.backgroundImage = `url(${iconURLs[name]})`;
-    const marker = new mapboxgl.Marker(markerDomEl).setLngLat(locationArr);
-    return marker;
+    markerDomEl.style.backgroundSize = "contain";
+    markerDomEl.style.backgroundImage = `url(${iconURLs[type]})`;
+    return new Marker(markerDomEl).setLngLat(coords);
 }
 
 module.exports = buildMarker;
